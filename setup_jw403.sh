@@ -6,14 +6,19 @@ PRINTER_LOCATION="Open plan, JW403"
 DRIVER_PATH="Ricoh-IM_C4500-PDF-Ricoh.ppd"
 
 try_install_cups() {
+  echo "\"cups\" not installed, trying to install..."
   if command -v apt > /dev/null 2>&1
   then
     apt update
-    sudo apt install cups
+    sudo apt install cups || exit 1
   elif command -v pacman > /dev/null 2>&1
   then
-    pacman -S cups
+    sudo pacman -S cups || exit 1
+  elif command -v yum > /dev/null 2>&1
+  then
+    sudo yum install cups || exit 1
   else
+    echo "Could not install cups."
     echo "You need to install the package \"cups\" before continuing."
     exit 1
   fi
