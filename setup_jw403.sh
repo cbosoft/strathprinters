@@ -29,6 +29,8 @@ then
   try_install_cups
 fi
 
+# TODO: check if cups is running
+
 USERNAME=
 PASSWORD=
 PASSWORD2=
