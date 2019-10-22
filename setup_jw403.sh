@@ -52,7 +52,7 @@ fi
 #SMB_URI="smb://DS/$USERNAME:$PASSWORD@ce-pcut-srv.chemeng.strath.ac.uk/ce-secure"
 SMB_URI="smb://DS/$USERNAME:$PASSWORD@eng-pcut-ss01.eng.strath.ac.uk/ENG_MonoSimplex"
 
-lpadmin -P "$DRIVER_PATH" -v "$SMB_URI" -p "$PRINTER_NAME" -L "$PRINTER_LOCATION" -u allow:all
+sudo lpadmin -P "$DRIVER_PATH" -v "$SMB_URI" -p "$PRINTER_NAME" -L "$PRINTER_LOCATION" -u allow:all
 
 cupsenable "$PRINTER_NAME"
 cupsaccept "$PRINTER_NAME"
