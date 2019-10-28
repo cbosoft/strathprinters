@@ -73,3 +73,14 @@ lpoptions -o PageSize=a4
 echo "  Page size: A4"
 #lpoptions -o Booklet=off
 
+
+echo "Printer has been installed."
+echo ""
+echo "You can print from the command line with 'lpr <filename>',"
+echo "or from a graphical application as normal."
+echo ""
+echo "lpr has some generic printing options (see 'man lpr'),"
+echo "'lpoptions -l' for printer specific options."
+echo ""
+echo "This is what I normally use for printing:"
+echo "'lpr -P Open-Plan-Printer <file> -o fit-to-page -o sides=two-sided-long-edge'"
