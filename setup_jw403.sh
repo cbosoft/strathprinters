@@ -30,7 +30,11 @@ then
   try_install_cups
 fi
 
-# TODO: check if cups is running
+if ! pgrep -x cups-browsed > /dev/null 2>&1
+then
+  echo "cups needs to be running, if you\'re running systemd, do:"
+  echo "  sudo systemctl start cups-browsed.service"
+fi
 
 USERNAME=
 PASSWORD=
