@@ -3,7 +3,8 @@
 ## SETTINGS
 PRINTER_NAME="Open-Plan-Printer"
 PRINTER_LOCATION="Open plan, JW403"
-DRIVER_PATH="Ricoh-IM_C4500-PDF-Ricoh.ppd"
+#DRIVER_PATH="Ricoh-IM_C4500-PDF-Ricoh.ppd"
+DRIVER_PATH="C4500.ppd"
 
 try_install_cups() {
   echo "\"cups\" not installed, trying to install..."
