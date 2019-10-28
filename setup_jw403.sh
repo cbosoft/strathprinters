@@ -64,5 +64,12 @@ sudo lpadmin -P "$DRIVER_PATH" -v "$SMB_URI" -p "$PRINTER_NAME" -L "$PRINTER_LOC
 cupsenable "$PRINTER_NAME"
 cupsaccept "$PRINTER_NAME"
 lpstat -d "$PRINTER_NAME"
-
 echo "Default printer set to \"$PRINTER_NAME\""
+
+echo "Setting some good defaults:"
+lpoptions -o ColorModel=CMYK
+echo "  Color printing: ON"
+lpoptions -o PageSize=a4
+echo "  Page size: A4"
+#lpoptions -o Booklet=off
+
